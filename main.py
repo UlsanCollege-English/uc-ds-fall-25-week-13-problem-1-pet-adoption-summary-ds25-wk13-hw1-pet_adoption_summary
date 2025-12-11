@@ -15,7 +15,13 @@ def summarize_adoptions(adoptions):
     # TODO Step 6: Implement the algorithm in Python using a suitable data structure.
     # TODO Step 7: Test your function with small examples and fix bugs.
     # TODO Step 8: Check the time and space complexity of your final solution.
-    pass
+    counts = {}
+    for adoption in adoptions:
+        if adoption in counts:
+            counts[adoption] += 1
+        else:
+            counts[adoption] = 1
+    return counts
 
 
 if __name__ == "__main__":
